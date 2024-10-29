@@ -14,8 +14,9 @@ const tasks = [
 ];
 
 const finishTask = (tasks) => {
-
+  return tasks.slice(0, -1);
 };
+
 
 console.log(finishTask(tasks));
 console.log(tasks);

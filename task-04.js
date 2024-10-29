@@ -42,8 +42,11 @@ const products = [
 ];
 
 const applyDiscount = (products, discount) => {
-
+  return products.map((product) => ({
+    ...product,
+    price: product.price - (product.price * discount) / 100,
+  }));
 };
 
-console.log(applyDiscount(products, 10));
+console.log(applyDiscount(products, 20));
 console.log(products);
